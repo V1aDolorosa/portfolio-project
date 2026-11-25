@@ -4,8 +4,6 @@ from sqlalchemy.orm import relationship
 
 from database import Base
 
-class database import Base
-
 class Player(Base):
     __tablename__ = "player"
 
@@ -64,8 +62,7 @@ class TeamPlayer(Base):
 
     team_id = Column(Integer, ForeignKey("team.team_id"),
                     primary_key = True, index = True)
-
-   player_id = Column(Integer, ForeignKey("player.player_id"),
+    player_id = Column(Integer, ForeignKey("player.player_id"),
     primary_key = True, index = True
     )
     last_changed_date = Column(Date, nullable = False)
